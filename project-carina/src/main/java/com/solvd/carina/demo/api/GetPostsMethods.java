@@ -14,6 +14,6 @@ import com.zebrunner.carina.utils.Configuration;
 public class GetPostsMethods extends AbstractApiMethodV2 {
 
     public GetPostsMethods() {
-        replaceUrlPlaceholder("https://jsonplaceholder.typicode.com", Configuration.getEnvArg("api_url"));
+        replaceUrlPlaceholder("base_url", Configuration.getEnvArg("api_url"));
     }
 }
