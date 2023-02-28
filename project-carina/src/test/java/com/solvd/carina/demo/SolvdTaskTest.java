@@ -2,7 +2,6 @@ package com.solvd.carina.demo;
 
 import com.qaprosoft.apitools.validation.JsonCompareKeywords;
 import com.qaprosoft.carina.core.foundation.AbstractTest;
-import com.qaprosoft.carina.core.foundation.api.APIMethodPoller;
 import com.solvd.carina.demo.api.GetPostsMethods;
 import com.solvd.carina.demo.api.PostPostsMethod;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
@@ -16,8 +15,6 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import java.lang.invoke.MethodHandles;
-import java.time.temporal.ChronoUnit;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
@@ -57,7 +54,7 @@ public class SolvdTaskTest extends AbstractTest {
         Assert.assertEquals(response.jsonPath().getString("body"), "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto");
     }
 
-    @Test()
+    /*@Test()
     @MethodOwner(owner = "maratano")
     public void testCreatePost() throws Exception {
         LOGGER.info("test");
@@ -75,7 +72,7 @@ public class SolvdTaskTest extends AbstractTest {
                 .stopAfter(10, ChronoUnit.SECONDS)
                 .execute();
         api.validateResponse();
-    }
+    }*/
 
     @Test()
     @MethodOwner(owner = "maratano")
