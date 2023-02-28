@@ -1,0 +1,277 @@
+[2023-02-28 01:09:18] [1] [WARN] Reporting disabled: using no op test run registrar
+[2023-02-28 01:09:18] [1] [INFO] TEST [project-carina - testCreatePost] STARTED at [10:09:18 2023-02-28]
+[2023-02-28 01:09:18] [1] [INFO] test
+[2023-02-28 01:09:18] [1] [INFO] Base properties loaded: api/posts/posts.properties
+[2023-02-28 01:09:19] [1] [INFO] Base properties loaded: api/posts/posts.properties
+[2023-02-28 01:09:22] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/posts
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Body:
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "jkkqiokppv",
+        "body": "mnknkpmttmmonqjliihihoovt",
+        
+    }
+]
+HTTP/1.1 500 Internal Server Error
+Date: Tue, 28 Feb 2023 13:09:21 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 999
+X-Ratelimit-Reset: 1677589786
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=6.9999987317715e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iYIll1aPb62GB1s%2F3%2BsH%2FJwRj2FM0oX6UHCyK4h1a37u2HGa3UL3nkZPdEI%2B7w2Kmq%2FltZi6SJUmDqiEI1z9NcXsOHuqFDyCoND%2FvOIY17M3ODk6DshJ9J4%2BN1rNZynl3klqaSmrq6kQdX7bAO7P"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7a0964ea7bbef7d2-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+<html>
+  <body>
+SyntaxError: Unexpected token } in JSON at position 107
+    at JSON.parse (    <anonymous>)
+    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)
+    at /app/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/app/node_modules/body-parser/node_modules/raw-body/index.js:224:16)
+    at done (/app/node_modules/body-parser/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/app/node_modules/body-parser/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)</anonymous>
+  </body>
+</html>
+
+[2023-02-28 01:09:23] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/posts
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Body:
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "jkkqiokppv",
+        "body": "mnknkpmttmmonqjliihihoovt",
+        
+    }
+]
+HTTP/1.1 500 Internal Server Error
+Date: Tue, 28 Feb 2023 13:09:23 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 998
+X-Ratelimit-Reset: 1677589786
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=4.9999999873762e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RpGHCNEmIGAXi6xdQxgHUDkPjKQ8O5r5I169VLNoCxg0LFesITBeDO06I9kt6nVM6VmBmi06nszo8rdHZZiTG0MMzSUlO1lMLC2Ok%2BddaFrhzQY15Tp2usrFkgWuSJXwVXj43%2BkyoGdb5Szo6eVN"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7a0964f6383ba79c-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+<html>
+  <body>
+SyntaxError: Unexpected token } in JSON at position 107
+    at JSON.parse (    <anonymous>)
+    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)
+    at /app/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/app/node_modules/body-parser/node_modules/raw-body/index.js:224:16)
+    at done (/app/node_modules/body-parser/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/app/node_modules/body-parser/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)</anonymous>
+  </body>
+</html>
+
+[2023-02-28 01:09:25] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/posts
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Body:
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "jkkqiokppv",
+        "body": "mnknkpmttmmonqjliihihoovt",
+        
+    }
+]
+HTTP/1.1 500 Internal Server Error
+Date: Tue, 28 Feb 2023 13:09:25 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 997
+X-Ratelimit-Reset: 1677589786
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=6.9999998686399e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CL9AMYGj1PyVwSebsGYcaryOcWwRR3hdCu7KlkK5eG%2FSa%2F4FUpA3Q82ygev3wKeS2ILEpSiBiiRteEqN7hTKmdT18N1Z8afNdFpXkYp6J7oq%2FYd70PTms1o9UJK6qTdrhpq0HuHk5h2qgmXKx8HS"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7a0964ff6de7f7b6-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+<html>
+  <body>
+SyntaxError: Unexpected token } in JSON at position 107
+    at JSON.parse (    <anonymous>)
+    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)
+    at /app/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/app/node_modules/body-parser/node_modules/raw-body/index.js:224:16)
+    at done (/app/node_modules/body-parser/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/app/node_modules/body-parser/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)</anonymous>
+  </body>
+</html>
+
+[2023-02-28 01:09:27] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/posts
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Body:
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "jkkqiokppv",
+        "body": "mnknkpmttmmonqjliihihoovt",
+        
+    }
+]
+HTTP/1.1 500 Internal Server Error
+Date: Tue, 28 Feb 2023 13:09:27 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 996
+X-Ratelimit-Reset: 1677589786
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=6.0000002122251e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FiEy2n5jxhM7Zw9Qv88hlbZQ5FqTI%2BvBTlrq6LIIASPtzNk3M9wAONktmWQqi%2FDv6ATtykda%2BdgN9GUAxAm%2BnqzK7ZrweH0fIL%2BkZa3Z4wGaytgcebSEeZGmYrTkKA2ziu7yLcVRLy0O6NeGRMYn"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7a09650a8860c1a3-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+<html>
+  <body>
+SyntaxError: Unexpected token } in JSON at position 107
+    at JSON.parse (    <anonymous>)
+    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)
+    at /app/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/app/node_modules/body-parser/node_modules/raw-body/index.js:224:16)
+    at done (/app/node_modules/body-parser/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/app/node_modules/body-parser/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)</anonymous>
+  </body>
+</html>
+
+[2023-02-28 01:09:27] [1] [ERROR] TEST [project-carina - testCreatePost] FAILED at [10:09:27 2023-02-28] - org.json.JSONException: Unparsable JSON string: SyntaxError: Unexpected token } in JSON at position 107
+    at JSON.parse (<anonymous>)
+    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)
+    at /app/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/app/node_modules/body-parser/node_modules/raw-body/index.js:224:16)
+    at done (/app/node_modules/body-parser/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/app/node_modules/body-parser/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1358:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:351)
+com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:305)
+com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:377)
+com.solvd.carina.demo.SolvdTaskTest.testCreatePost(SolvdTaskTest.java:78)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+org.testng.TestRunner.privateRun(TestRunner.java:829)
+org.testng.TestRunner.run(TestRunner.java:602)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+org.testng.SuiteRunner.run(SuiteRunner.java:330)
+org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+org.testng.TestNG.runSuites(TestNG.java:1099)
+org.testng.TestNG.run(TestNG.java:1067)
+com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)

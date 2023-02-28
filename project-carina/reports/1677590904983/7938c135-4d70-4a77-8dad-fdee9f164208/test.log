@@ -1,0 +1,265 @@
+[2023-02-28 01:28:27] [1] [WARN] Reporting disabled: using no op test run registrar
+[2023-02-28 01:28:27] [1] [INFO] TEST [project-carina - testCreatePost] STARTED at [10:28:27 2023-02-28]
+[2023-02-28 01:28:27] [1] [INFO] test
+[2023-02-28 01:28:27] [1] [INFO] Base properties loaded: api/posts/posts.properties
+[2023-02-28 01:28:28] [1] [INFO] Base properties loaded: api/posts/posts.properties
+[2023-02-28 01:28:31] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/posts
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Body:
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "bhhjimlljq",
+        "body": "rtstnsmoiqnnlnnrnnlnhjekd"
+    }
+]
+HTTP/1.1 201 Created
+Date: Tue, 28 Feb 2023 13:28:30 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 126
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 999
+X-Ratelimit-Reset: 1677590926
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Access-Control-Expose-Headers: Location
+Location: http://jsonplaceholder.typicode.com/posts/101
+X-Content-Type-Options: nosniff
+Etag: W/"7e-KOP03gbURaBI8OkD9aBGs8YdEHc"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=8.0000000082237e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8lG5cVT7D%2BqeBqkwFaCz1Ret%2BQ661PWjQea4Qp8swk731YO41e1570FeSiy9L5l8RLyD%2BAE9he6Uw4edvl7T%2FX7gD4X9U2Soml8FX43XpVxie%2FDuROXanp8fcKK02ACZo9KkIHbrmfPfRtUw8puh"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7a0980f73ab2a79b-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "0": {
+        "userId": 1,
+        "id": 1,
+        "title": "bhhjimlljq",
+        "body": "rtstnsmoiqnnlnnrnnlnhjekd"
+    },
+    "id": 101
+}
+
+[2023-02-28 01:28:32] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/posts
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Body:
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "bhhjimlljq",
+        "body": "rtstnsmoiqnnlnnrnnlnhjekd"
+    }
+]
+HTTP/1.1 201 Created
+Date: Tue, 28 Feb 2023 13:28:32 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 126
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 998
+X-Ratelimit-Reset: 1677590926
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Access-Control-Expose-Headers: Location
+Location: http://jsonplaceholder.typicode.com/posts/101
+X-Content-Type-Options: nosniff
+Etag: W/"7e-KOP03gbURaBI8OkD9aBGs8YdEHc"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=5.0000016926788e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wPZPtdh0P9TVmN5AFkk7ocgh4Hl7nnnqAjCEE5x2Dq3PPCXPQO7Rua1z0Sgwk58y66FMAjHMOtMGqBHEHaQANdsGKaqH1iPhsbol8uSOJnKkrKYpURAV4CO%2FSVTkrrZxE4cMj1TO2x6MNeez5LSW"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7a0981022fe5a795-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "0": {
+        "userId": 1,
+        "id": 1,
+        "title": "bhhjimlljq",
+        "body": "rtstnsmoiqnnlnnrnnlnhjekd"
+    },
+    "id": 101
+}
+
+[2023-02-28 01:28:34] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/posts
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Body:
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "bhhjimlljq",
+        "body": "rtstnsmoiqnnlnnrnnlnhjekd"
+    }
+]
+HTTP/1.1 201 Created
+Date: Tue, 28 Feb 2023 13:28:34 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 126
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 997
+X-Ratelimit-Reset: 1677590926
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Access-Control-Expose-Headers: Location
+Location: http://jsonplaceholder.typicode.com/posts/101
+X-Content-Type-Options: nosniff
+Etag: W/"7e-KOP03gbURaBI8OkD9aBGs8YdEHc"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=7.0000023697503e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lVtSuvzhXfT5HcnqwcGbYwnAbb8pPM%2FU2wIrlg%2BVDlUZJKx317Dbxkvtl0w%2BzgUF%2FZYP6mu6ArgXaXyHkicOTLCf6yY1ON4POQkek9R3q%2BjZk6racGVCOE9xJVh4aoM3YaPhceolKfyO0AFJa9bz"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7a09810bef46d2e0-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "0": {
+        "userId": 1,
+        "id": 1,
+        "title": "bhhjimlljq",
+        "body": "rtstnsmoiqnnlnnrnnlnhjekd"
+    },
+    "id": 101
+}
+
+[2023-02-28 01:28:35] [1] [INFO] Request method:	POST
+Request URI:	https://jsonplaceholder.typicode.com/posts
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Multiparts:		<none>
+Cookies:		<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Body:
+[
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "bhhjimlljq",
+        "body": "rtstnsmoiqnnlnnrnnlnhjekd"
+    }
+]
+HTTP/1.1 201 Created
+Date: Tue, 28 Feb 2023 13:28:35 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 126
+Connection: keep-alive
+X-Powered-By: Express
+X-Ratelimit-Limit: 1000
+X-Ratelimit-Remaining: 996
+X-Ratelimit-Reset: 1677590926
+Vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+Access-Control-Allow-Credentials: true
+Cache-Control: no-cache
+Pragma: no-cache
+Expires: -1
+Access-Control-Expose-Headers: Location
+Location: http://jsonplaceholder.typicode.com/posts/101
+X-Content-Type-Options: nosniff
+Etag: W/"7e-KOP03gbURaBI8OkD9aBGs8YdEHc"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+Server-Timing: cf-q-config;dur=4.9999998736894e-06
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3Rr%2BxRMjwiEhvqMrn8E8f%2BJ%2Feb6WaAm%2F58jBcJooxCf477HrA6%2BuPGD6gwUadne8oLV3iqHg2oDMznQ9tOXfZUlmRI48o7qDWxl8Rh7JPAuFLQA8Cks%2FmdKRLsm7aMrQeKKpjH9TLeOr55sLgBvh"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7a0981162d03c81b-EZE
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+    "0": {
+        "userId": 1,
+        "id": 1,
+        "title": "bhhjimlljq",
+        "body": "rtstnsmoiqnnlnnrnnlnhjekd"
+    },
+    "id": 101
+}
+
+[2023-02-28 01:28:35] [1] [ERROR] TEST [project-carina - testCreatePost] FAILED at [10:28:35 2023-02-28] - id
+Expected: 11
+     got: 101
+
+
+org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:482)
+org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:464)
+com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:349)
+com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:305)
+com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2.validateResponse(AbstractApiMethodV2.java:377)
+com.solvd.carina.demo.SolvdTaskTest.testCreatePost(SolvdTaskTest.java:78)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+org.testng.TestRunner.privateRun(TestRunner.java:829)
+org.testng.TestRunner.run(TestRunner.java:602)
+org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+org.testng.SuiteRunner.run(SuiteRunner.java:330)
+org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+org.testng.TestNG.runSuites(TestNG.java:1099)
+org.testng.TestNG.run(TestNG.java:1067)
+com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)

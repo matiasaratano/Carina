@@ -1,3 +1,0 @@
-[2023-02-28 12:30:37] [1] [WARN] Reporting disabled: using no op test run registrar
-[2023-02-28 12:30:37] [1] [INFO] TEST [project-carina - testGetFirstPost] STARTED at [09:30:37 2023-02-28]
-[2023-02-28 12:30:41] [1] [INFO] TEST [project-carina - testGetFirstPost] PASSED at [09:30:41 2023-02-28]
