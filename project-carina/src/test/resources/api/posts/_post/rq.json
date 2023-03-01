@@ -1,8 +1,8 @@
 [
-  {
-    "userId": 1,
-    "id": 1,
-    <#if title??>"title": "${title}",</#if>
-    <#if body??>"body": "${body}"</#if>
-
-  }]
+    {
+        "userId": 1,
+        "id": 1,
+        <#if title??>"title": "${title}",</#if>
+        <#if body??>"body": "${body}"</#if>
+    }
+]

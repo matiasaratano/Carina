@@ -1,9 +1,10 @@
 {
   "0": {
-    "userId": 1,
-    "id": 1,
+    "userId": "type:Integer",
+    "id": "type:Integer",
     <#if title??>"title": "${title}",</#if>
     <#if body??>"body": "${body}"</#if>
+
   },
-  "id": 11
+  "id": 101
 }

@@ -1,4 +1,4 @@
-package com.solvd.carina.demo.api;
+package com.solvd.carina.demo.api.posts;
 
 
 import com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2;
@@ -8,16 +8,11 @@ import com.qaprosoft.carina.core.foundation.api.annotation.ResponseTemplatePath;
 import com.qaprosoft.carina.core.foundation.api.annotation.SuccessfulHttpStatus;
 import com.qaprosoft.carina.core.foundation.api.http.HttpMethodType;
 import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
-import com.zebrunner.carina.utils.Configuration;
 
-@Endpoint(url = "${base_url}/posts", methodType = HttpMethodType.POST)
+@Endpoint(url = "${config.env.base_url}/posts", methodType = HttpMethodType.POST)
 @RequestTemplatePath(path = "api/posts/_post/rq.json")
 @ResponseTemplatePath(path = "api/posts/_post/rs.json")
+//@PropertiesPath(path = "api/posts/posts.properties")
 @SuccessfulHttpStatus(status = HttpResponseStatusType.CREATED_201)
 public class PostPostsMethod extends AbstractApiMethodV2 {
-
-    public PostPostsMethod() {
-        super("api/posts/_post/rq.json", "api/posts/_post/rs.json", "api/posts/posts.properties");
-        replaceUrlPlaceholder("base_url", Configuration.getEnvArg("api_url"));
-    }
 }
