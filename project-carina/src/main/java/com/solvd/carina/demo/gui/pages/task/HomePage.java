@@ -12,6 +12,9 @@ public class HomePage extends AbstractPage {
     @FindBy(xpath = "//div[contains(@id, 'ybarAccountProfile')]")
     private ExtendedWebElement loginButton;
 
+    @FindBy(xpath = "//a[contains(@class, '_yb_19bmw   rapid-noclick-resp')]")
+    private ExtendedWebElement sportsLabel;
+
     @FindBy(xpath = "//div[contains(@id, 'module-footer')]")
     private FooterMenu footerMenu;
 
@@ -27,5 +30,9 @@ public class HomePage extends AbstractPage {
     public LoginPage clickLoginButton() {
         loginButton.click();
         return new LoginPage(getDriver());
+    }
+
+    public void clickSportsLabel() {
+        sportsLabel.click();
     }
 }
