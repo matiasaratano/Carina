@@ -7,28 +7,23 @@ import org.openqa.selenium.support.FindBy;
 
 public class CreateAccountPage extends AbstractPage {
 
-    @FindBy(xpath = "//input[contains(@name, 'firstName')]")
+    @FindBy(name = "firstName")
     private ExtendedWebElement fullNameInput;
 
-    @FindBy(xpath = "//input[contains(@name, 'userId')]")
+    @FindBy(name = "userId")
     private ExtendedWebElement emailInput;
 
-    @FindBy(xpath = "//input[contains(@name, 'password')]")
+    @FindBy(name = "password")
     private ExtendedWebElement passwordInput;
 
     public CreateAccountPage(WebDriver driver) {
         super(driver);
+        setUiLoadedMarker(fullNameInput);
     }
 
-    public void fillFullName(String fullname) {
+    public void fillAccountDetails(String fullname, String email, String password) {
         fullNameInput.type(fullname);
-    }
-
-    public void fullEmail(String email) {
         emailInput.type(email);
-    }
-
-    public void fillPassword(String password) {
         passwordInput.type(password);
     }
 

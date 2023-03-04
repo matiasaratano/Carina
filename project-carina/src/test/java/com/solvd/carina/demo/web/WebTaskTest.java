@@ -6,6 +6,7 @@ import com.solvd.carina.demo.gui.pages.task.CreateAccountPage;
 import com.solvd.carina.demo.gui.pages.task.HomePage;
 import com.solvd.carina.demo.gui.pages.task.LoginPage;
 import com.solvd.carina.demo.gui.pages.task.RegisterPage;
+import com.zebrunner.carina.utils.R;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -19,19 +20,26 @@ import static org.testng.Assert.assertTrue;
 public class WebTaskTest extends AbstractTest {
 
     @Test
-    public void firstTest() {
+    public void testIsLoginButtonPresent() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
+        Assert.assertTrue(homePage.isPageOpened(), "Home page isn't opened");
+        assertTrue(homePage.isLoginButtonPresent(), "Login button isn't present");
+    }
 
-        LoginPage loginScreen = homePage.clickLoginButton();
-        assertTrue(loginScreen.isLoginEmailButtonPresent(), "Login button isn't present");
-        loginScreen.fillUsername("matias");
-
-        RegisterPage registerScreen = loginScreen.clickLoginUsernameButton();
-        CreateAccountPage createAccountScreen = registerScreen.clickRegisterButton();
-        createAccountScreen.fillFullName("Matias Aratano");
-        createAccountScreen.fullEmail("matias.aratano");
-        createAccountScreen.fillPassword("asdasd");
+    @Test
+    public void testFillRandomDataInAccountDetails() {
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        LoginPage loginPage = homePage.clickLoginButton();
+        Assert.assertTrue(loginPage.isPageOpened(), "Login page isn't opened");
+        assertTrue(loginPage.isLoginEmailButtonPresent(), "Login button isn't present");
+        loginPage.fillUsername(R.TESTDATA.get("user_1_username"));
+        RegisterPage registerPage = loginPage.clickLoginUsernameButton();
+        Assert.assertTrue(registerPage.isPageOpened(), "Register page isn't opened");
+        CreateAccountPage createAccountPage = registerPage.clickRegisterButton();
+        Assert.assertTrue(createAccountPage.isPageOpened(), "Create Account page isn't opened");
+        createAccountPage.fillAccountDetails(R.TESTDATA.get("user_1_fullname"), R.TESTDATA.get("user_1_email"), R.TESTDATA.get("user_1_password"));
     }
 
     @Test

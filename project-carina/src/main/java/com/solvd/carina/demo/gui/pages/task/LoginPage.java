@@ -8,20 +8,22 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends AbstractPage {
 
 
-    @FindBy(xpath = "//input[contains(@id, 'login-username')]")
+    @FindBy(id = "login-username")
     private ExtendedWebElement usernameLabel;
 
-    @FindBy(xpath = "//input[contains(@id, 'login-signin')]")
+    @FindBy(id = "login-signin")
     private ExtendedWebElement loginSigninButton;
 
-    @FindBy(xpath = "//div[contains(@class, 'recaptcha-checkbox-border-label')]")
+    @FindBy(css = "div.recaptcha-checkbox-border-label")
+    //@FindBy(xpath = "//div[contains(@class, 'recaptcha-checkbox-border-label')]")
     private ExtendedWebElement captchaCheckbox;
 
-    @FindBy(xpath = "//button[contains(@id, 'recaptcha-submit')]")
+    @FindBy(id = "recaptcha-submit")
     private ExtendedWebElement captchaButton;
 
     public LoginPage(WebDriver driver) {
         super(driver);
+        setUiLoadedMarker(loginSigninButton);
     }
 
     public boolean isLoginEmailButtonPresent() {

@@ -6,12 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class RegisterPage extends AbstractPage {
-    @FindBy(xpath = "//a[contains(@class, 'pure-button puree-button-primary puree-spinner-button try-again')]")
+    @FindBy(xpath = "//a[contains(text(), 'Regist')]")
     private ExtendedWebElement registerButton;
 
 
     public RegisterPage(WebDriver driver) {
         super(driver);
+        setUiLoadedMarker(registerButton);
     }
 
     public CreateAccountPage clickRegisterButton() {

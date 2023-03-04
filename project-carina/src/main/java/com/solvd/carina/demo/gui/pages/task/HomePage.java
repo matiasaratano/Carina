@@ -9,18 +9,18 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends AbstractPage {
 
-    @FindBy(xpath = "//div[contains(@id, 'ybarAccountProfile')]")
+    @FindBy(id = "ybarAccountProfile")
     private ExtendedWebElement loginButton;
 
-    @FindBy(xpath = "//a[contains(@class, '_yb_19bmw   rapid-noclick-resp')]")
+    @FindBy(id = "root_3")
     private ExtendedWebElement sportsLabel;
 
-    @FindBy(xpath = "//div[contains(@id, 'module-footer')]")
+    @FindBy(id = "module-footer")
     private FooterMenu footerMenu;
 
     public HomePage(WebDriver driver) {
         super(driver);
-        setPageAbsoluteURL("https://www.yahoo.com/");
+        setUiLoadedMarker(loginButton);
     }
 
     public FooterMenu getFooterMenu() {
@@ -30,6 +30,11 @@ public class HomePage extends AbstractPage {
     public LoginPage clickLoginButton() {
         loginButton.click();
         return new LoginPage(getDriver());
+
+    }
+
+    public boolean isLoginButtonPresent() {
+        return loginButton.isElementPresent();
     }
 
     public void clickSportsLabel() {
