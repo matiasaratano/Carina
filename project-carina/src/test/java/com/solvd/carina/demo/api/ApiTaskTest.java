@@ -33,9 +33,7 @@ public class ApiTaskTest extends AbstractTest {
     @MethodOwner(owner = "maratano")
     public void testCreatePost() throws Exception {
         LOGGER.info("Test Post");
-        setCases("4555,54545");
         PostPostsMethod api = new PostPostsMethod();
-        api.setProperties("api/posts/posts.properties");
         api.callAPIExpectSuccess();
         api.validateResponse();
     }
@@ -44,7 +42,6 @@ public class ApiTaskTest extends AbstractTest {
     @MethodOwner(owner = "maratano")
     public void testCreatePostsMissingSomeFields() throws Exception {
         PostPostsMethod api = new PostPostsMethod();
-        api.setProperties("api/posts/posts.properties");
         api.getProperties().remove("title");
         api.callAPIExpectSuccess();
         api.validateResponse();
@@ -54,7 +51,6 @@ public class ApiTaskTest extends AbstractTest {
     @MethodOwner(owner = "maratano")
     public void testUpdatePosts() throws Exception {
         LOGGER.info("Test Post");
-        setCases("4555,54545");
         PostPostsMethod api = new PostPostsMethod();
         api.setProperties("api/posts/posts.properties");
         Response response = api.callAPIExpectSuccess();
