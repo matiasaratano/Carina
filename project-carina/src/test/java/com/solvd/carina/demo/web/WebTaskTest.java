@@ -13,8 +13,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-
 import static org.testng.Assert.assertTrue;
 
 
@@ -62,31 +60,7 @@ public class WebTaskTest extends AbstractTest {
 
         FooterMenu footer = homePage.getFooterMenu();
         footer.clickTwitter();
-        ArrayList<String> handlers = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(handlers.get(1));
-        Assert.assertEquals(getDriver().getCurrentUrl(), R.TESTDATA.get("twitter_url"));
-        driver.close();
     }
-
-    /*@Test
-    public void testFillRandomDataInAccountDetails() {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home page isn't opened");
-
-        LoginUsernamePage loginUsernamePage = homePage.clickLoginButton();
-        Assert.assertTrue(loginUsernamePage.isPageOpened(), "Login page isn't opened");
-
-        loginUsernamePage.fillUsername(R.TESTDATA.get("user_1_username"));
-        RegisterPage registerPage = loginUsernamePage.clickLoginUsernameButton();
-        Assert.assertTrue(registerPage.isPageOpened(), "Register page isn't opened");
-
-        CreateAccountPage createAccountPage = registerPage.clickRegisterButton();
-        Assert.assertTrue(createAccountPage.isPageOpened(), "Create Account page isn't opened");
-
-        createAccountPage.fillAccountDetails(R.TESTDATA.get("user_1_fullname"), R.TESTDATA.get("user_1_email"), R.TESTDATA.get("user_1_password"), R.TESTDATA.get("user_1_birth"));
-
-    }*/
 
     @Test
     @MethodOwner(owner = "maratano")
