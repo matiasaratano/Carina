@@ -5,7 +5,7 @@ import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends AbstractPage {
+public class LoginUsernamePage extends AbstractPage {
 
 
     @FindBy(id = "login-username")
@@ -21,7 +21,7 @@ public class LoginPage extends AbstractPage {
     @FindBy(id = "recaptcha-submit")
     private ExtendedWebElement captchaButton;
 
-    public LoginPage(WebDriver driver) {
+    public LoginUsernamePage(WebDriver driver) {
         super(driver);
         setUiLoadedMarker(loginSigninButton);
     }
@@ -34,8 +34,8 @@ public class LoginPage extends AbstractPage {
         usernameLabel.type(username);
     }
 
-    public RegisterPage clickLoginUsernameButton() {
+    public LoginPasswordPage clickLoginUsernameButton() {
         loginSigninButton.click();
-        return new RegisterPage(getDriver());
+        return new LoginPasswordPage(getDriver());
     }
 }

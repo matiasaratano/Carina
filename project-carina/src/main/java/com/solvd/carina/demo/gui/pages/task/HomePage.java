@@ -3,8 +3,11 @@ package com.solvd.carina.demo.gui.pages.task;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import com.solvd.carina.demo.gui.components.task.FooterMenu;
+import com.solvd.carina.demo.gui.components.task.SearchBoxItem;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 
 public class HomePage extends AbstractPage {
@@ -18,6 +21,12 @@ public class HomePage extends AbstractPage {
     @FindBy(id = "module-footer")
     private FooterMenu footerMenu;
 
+    @FindBy(id = "ybar-search-box-container")
+    private SearchBoxItem searchBox;
+
+    @FindBy(id = "ybar-navigation")
+    private List<ExtendedWebElement> list;
+
     public HomePage(WebDriver driver) {
         super(driver);
         setUiLoadedMarker(loginButton);
@@ -27,9 +36,9 @@ public class HomePage extends AbstractPage {
         return footerMenu;
     }
 
-    public LoginPage clickLoginButton() {
+    public LoginUsernamePage clickLoginButton() {
         loginButton.click();
-        return new LoginPage(getDriver());
+        return new LoginUsernamePage(getDriver());
 
     }
 
@@ -37,7 +46,18 @@ public class HomePage extends AbstractPage {
         return loginButton.isElementPresent();
     }
 
-    public void clickSportsLabel() {
+    public SportsPage clickSportsLabel() {
         sportsLabel.click();
+        return new SportsPage(getDriver());
+    }
+
+    public void checkKeyPresenceInNavigation(String label) {
+        for (ExtendedWebElement element : list) {
+            if (element.getText().contains(label)) {
+                element.click();
+                break;
+            }
+        }
+
     }
 }

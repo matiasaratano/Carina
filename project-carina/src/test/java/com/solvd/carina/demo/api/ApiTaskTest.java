@@ -19,7 +19,6 @@ public class ApiTaskTest extends AbstractTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-
     @Test()
     @MethodOwner(owner = "maratano")
     public void testGetPosts() {

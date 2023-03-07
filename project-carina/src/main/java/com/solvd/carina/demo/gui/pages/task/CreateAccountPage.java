@@ -16,15 +16,19 @@ public class CreateAccountPage extends AbstractPage {
     @FindBy(name = "password")
     private ExtendedWebElement passwordInput;
 
+    @FindBy(name = "birthYear")
+    private ExtendedWebElement birthYearInput;
+
     public CreateAccountPage(WebDriver driver) {
         super(driver);
         setUiLoadedMarker(fullNameInput);
     }
 
-    public void fillAccountDetails(String fullname, String email, String password) {
+    public void fillAccountDetails(String fullname, String email, String password, String birthYear) {
         fullNameInput.type(fullname);
         emailInput.type(email);
-        passwordInput.type(password);
+        birthYearInput.type(birthYear);
+
     }
 
 }
