@@ -8,4 +8,5 @@ public class SearchBoxItem extends AbstractUIObject {
     public SearchBoxItem(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
+
 }

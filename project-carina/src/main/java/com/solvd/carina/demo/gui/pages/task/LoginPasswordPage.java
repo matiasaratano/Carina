@@ -26,7 +26,7 @@ public class LoginPasswordPage extends AbstractPage {
     }
 
     public boolean isWrongPassLabelPresent() {
-        return wrongPasswordLabel.isElementPresent();
+        return wrongPasswordLabel.isElementPresent(5);
     }
 
     public void fillPassword(String pass) {

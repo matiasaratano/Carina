@@ -3,7 +3,6 @@ package com.solvd.carina.demo.gui.pages.task;
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import com.solvd.carina.demo.gui.components.task.FooterMenu;
-import com.solvd.carina.demo.gui.components.task.SearchBoxItem;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -21,8 +20,12 @@ public class HomePage extends AbstractPage {
     @FindBy(id = "module-footer")
     private FooterMenu footerMenu;
 
-    @FindBy(id = "ybar-search-box-container")
-    private SearchBoxItem searchBox;
+    @FindBy(id = "ybar-sbq")
+    private ExtendedWebElement searchBox;
+
+    @FindBy(id = "ybar-search")
+    private ExtendedWebElement searchButton;
+
 
     @FindBy(id = "ybar-navigation")
     private List<ExtendedWebElement> list;
@@ -39,7 +42,6 @@ public class HomePage extends AbstractPage {
     public LoginUsernamePage clickLoginButton() {
         loginButton.click();
         return new LoginUsernamePage(getDriver());
-
     }
 
     public boolean isLoginButtonPresent() {
@@ -51,6 +53,10 @@ public class HomePage extends AbstractPage {
         return new SportsPage(getDriver());
     }
 
+    public boolean checkUsernameLabel(String name) {
+        return loginButton.getText().contains(name);
+    }
+
     public void checkKeyPresenceInNavigation(String label) {
         for (ExtendedWebElement element : list) {
             if (element.getText().contains(label)) {
@@ -58,6 +64,11 @@ public class HomePage extends AbstractPage {
                 break;
             }
         }
+    }
 
+    public NewsPage search(String subject) {
+        this.searchBox.type(subject);
+        this.searchButton.click();
+        return new NewsPage(getDriver());
     }
 }

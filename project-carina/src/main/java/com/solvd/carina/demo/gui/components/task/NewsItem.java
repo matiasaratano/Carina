@@ -1,4 +1,4 @@
-package com.solvd.carina.demo.gui.components;
+package com.solvd.carina.demo.gui.components.task;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractUIObject;
@@ -8,15 +8,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class NewsItem extends AbstractUIObject {
 
-    //@FindBy(xpath = "//div[@class='compTitle options-toggle']//a")
-    @FindBy(xpath = "//a[@data-matarget='algo']")
+    @FindBy(xpath = "./a")
     public ExtendedWebElement titleLink;
-
-    public NewsItem(WebDriver driver, SearchContext sc) {
-        super(driver, sc);
-    }
 
     public String readTitle() {
         return titleLink.getElement().getText();
+    }
+
+    public NewsItem(WebDriver driver, SearchContext searchContext) {
+        super(driver, searchContext);
     }
 }
