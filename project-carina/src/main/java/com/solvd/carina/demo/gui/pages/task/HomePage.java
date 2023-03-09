@@ -20,6 +20,9 @@ public class HomePage extends AbstractPage {
     @FindBy(id = "module-footer")
     private FooterMenu footerMenu;
 
+    @FindBy(id = "footer-wrapper")
+    private ExtendedWebElement footer;
+
     @FindBy(id = "ybar-sbq")
     private ExtendedWebElement searchBox;
 
@@ -71,4 +74,9 @@ public class HomePage extends AbstractPage {
         this.searchButton.click();
         return new NewsPage(getDriver());
     }
+
+    public void scrollToFooter() {
+        footer.scrollTo();
+    }
+
 }

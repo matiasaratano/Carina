@@ -16,7 +16,6 @@ public class NewsPage extends AbstractPage {
     @FindBy(xpath = "//input[@type='submit']")
     private ExtendedWebElement searchButton;
 
-    //@FindBy(className = "compTitle")
     @FindBy(xpath = "//a[@data-matarget='algo']")
     private List<NewsItem> news;
 

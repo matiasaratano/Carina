@@ -23,15 +23,16 @@ public class FooterMenu extends AbstractUIObject {
         super(driver, searchContext);
     }
 
-    public void clickTwitter() {
+    public void clickTwitterIcon() {
         twitterIcon.click();
     }
 
-    public void clickFacebook() {
+    public void clickFacebookIcon() {
         facebookIcon.click();
     }
 
-    public void clickInstagram() {
+    public void clickInstagramIcon() {
         instagramIcon.click();
     }
+
 }

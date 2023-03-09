@@ -2,7 +2,6 @@ package com.solvd.carina.demo.gui.pages.task;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.solvd.carina.demo.gui.components.task.SearchBoxItem;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,8 +9,11 @@ import org.openqa.selenium.support.FindBy;
 public class SportsPage extends AbstractPage {
 
 
-    @FindBy(id = "ybar-search-box-container")
-    private SearchBoxItem searchBox;
+    @FindBy(id = "ybar-sbq")
+    private ExtendedWebElement searchBox;
+
+    @FindBy(id = "ybar-search")
+    private ExtendedWebElement searchButton;
 
     @FindBy(xpath = "//h1[contains(text(), 'Depor')]")
     private ExtendedWebElement yahooLabel;
@@ -20,5 +22,11 @@ public class SportsPage extends AbstractPage {
     public SportsPage(WebDriver driver) {
         super(driver);
         setUiLoadedMarker(yahooLabel);
+    }
+
+    public NewsPage search(String subject) {
+        this.searchBox.type(subject);
+        this.searchButton.click();
+        return new NewsPage(getDriver());
     }
 }
