@@ -2,7 +2,11 @@ package com.solvd.carina.demo.web;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
 import com.solvd.carina.demo.gui.components.NewsItem;
-import com.solvd.carina.demo.gui.pages.task.*;
+import com.solvd.carina.demo.gui.pages.task.HomePage;
+import com.solvd.carina.demo.gui.pages.task.LoginPasswordPage;
+import com.solvd.carina.demo.gui.pages.task.NewsPage;
+import com.solvd.carina.demo.gui.pages.task.SportsPage;
+import com.solvd.carina.demo.service.YahooService;
 import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import com.zebrunner.carina.utils.R;
 import org.apache.commons.collections.CollectionUtils;
@@ -11,7 +15,6 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import service.HomePageService;
 
 import java.util.List;
 
@@ -21,36 +24,25 @@ public class WebTaskTest extends AbstractTest {
     @Test
     @MethodOwner(owner = "maratano")
     public void testLogInUserSuccessfully() {
-        HomePageService hps = new HomePageService();
-        HomePage homePage = hps.loginService(R.TESTDATA.get("user_3_username"), R.TESTDATA.get("user_3_password"));
+        YahooService yahooService = new YahooService();
+        HomePage homePage = new HomePage(getDriver());
+        yahooService.loginUserAndPasswordServiceMethod(R.TESTDATA.get("user_3_username"), R.TESTDATA.get("user_3_password"));
         Assert.assertTrue(homePage.isPageOpened(), "Home page isn't opened");
     }
 
     @Test
     @MethodOwner(owner = "maratano")
     public void testWrongPasswordInserted() {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home page isn't opened");
-
-        LoginUsernamePage loginUsernamePage = homePage.clickLoginButton();
-        Assert.assertTrue(loginUsernamePage.isPageOpened(), "Login username page isn't opened");
-        loginUsernamePage.fillUsername(R.TESTDATA.get("user_2_username"));
-
-        LoginPasswordPage loginPasswordPage = loginUsernamePage.clickLoginUsernameButton();
-        Assert.assertTrue(loginPasswordPage.isPageOpened(), "Login password page isn't opened");
-        loginPasswordPage.fillPassword(R.TESTDATA.get("user_2_password"));
-        loginPasswordPage.clickLoginButton();
-
+        YahooService yahooService = new YahooService();
+        LoginPasswordPage loginPasswordPage = yahooService.loginUserAndPasswordServiceMethod(R.TESTDATA.get("user_2_username"), R.TESTDATA.get("user_2_password"));
         Assert.assertTrue(loginPasswordPage.isWrongPassLabelPresent(), "Wrong password");
     }
 
     @Test()
     @MethodOwner(owner = "maratano")
     public void testDesktopWidthAndHeight() {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home page isn't opened");
+        YahooService yahooService = new YahooService();
+        HomePage homePage = yahooService.homePageCheckServiceMethod();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(String.valueOf(homePage.getDevice().getDeviceType()), "DESKTOP");
         softAssert.assertEquals(String.valueOf(getDriver().manage().window().getSize().getWidth() >= 1024), "true");
@@ -61,9 +53,8 @@ public class WebTaskTest extends AbstractTest {
     @Test()
     @MethodOwner(owner = "maratano")
     public void testSearchCheckNewsTitles() {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
+        YahooService yahooService = new YahooService();
+        HomePage homePage = yahooService.homePageCheckServiceMethod();
 
         NewsPage newsPage = homePage.search(R.TESTDATA.get("test_first_search"));
         Assert.assertTrue(newsPage.isPageOpened(), "News page is not opened!");
@@ -80,17 +71,21 @@ public class WebTaskTest extends AbstractTest {
 
     @Test(dataProvider = "searchTerms", description = "Test Yahoo search functionality")
     @MethodOwner(owner = "maratano")
-    public void testOpenAndSearchInSportPage(int a, String searchTerm) {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        Assert.assertTrue(homePage.isPageOpened(5), "Home page isn't opened");
+    public void testSearchUsingDataProvider(int a, String searchTerm) {
+        YahooService yahooService = new YahooService();
+        HomePage homePage = yahooService.homePageCheckServiceMethod();
 
         SportsPage sportsPage = homePage.clickSportsLabel();
         Assert.assertTrue(sportsPage.isPageOpened(5), "Sports page isn't opened");
 
-        NewsPage newsPage = sportsPage.search(searchTerm);
-        Assert.assertTrue(newsPage.isPageOpened(5), "News page is not opened!");
-
+        List<NewsItem> news = sportsPage.searchNews(searchTerm);
+        Assert.assertFalse(CollectionUtils.isEmpty(news), "News not found!");
+        SoftAssert softAssert = new SoftAssert();
+        for (NewsItem n : news) {
+            softAssert.assertTrue(StringUtils.containsIgnoreCase(n.readTitle(), searchTerm),
+                    "Invalid search results for " + n.readTitle());
+        }
+        softAssert.assertAll();
     }
 
     @DataProvider(name = "searchTerms")

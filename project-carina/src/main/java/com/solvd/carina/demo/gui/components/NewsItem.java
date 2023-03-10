@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class NewsItem extends AbstractUIObject {
-    
+
     @FindBy(xpath = "//a[@data-matarget='algo']")
     public ExtendedWebElement titleLink;
 
@@ -16,6 +16,6 @@ public class NewsItem extends AbstractUIObject {
     }
 
     public String readTitle() {
-        return titleLink.getElement().getText();
+        return titleLink.getText();
     }
 }

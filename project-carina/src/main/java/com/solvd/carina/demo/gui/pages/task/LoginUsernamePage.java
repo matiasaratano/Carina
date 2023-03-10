@@ -15,7 +15,6 @@ public class LoginUsernamePage extends AbstractPage {
     private ExtendedWebElement loginSigninButton;
 
     @FindBy(css = "div.recaptcha-checkbox-border-label")
-    //@FindBy(xpath = "//div[contains(@class, 'recaptcha-checkbox-border-label')]")
     private ExtendedWebElement captchaCheckbox;
 
     @FindBy(id = "recaptcha-submit")
