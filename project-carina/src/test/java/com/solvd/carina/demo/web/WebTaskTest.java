@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import service.HomePageService;
 
 import java.util.List;
 
@@ -19,21 +20,9 @@ public class WebTaskTest extends AbstractTest {
 
     @Test
     @MethodOwner(owner = "maratano")
-    public void testLogInUserSuccesfully() {
-        HomePage homePage = new HomePage(getDriver());
-        homePage.open();
-        homePage.assertPageOpened(5);
-
-        LoginUsernamePage loginUsernamePage = homePage.clickLoginButton();
-        loginUsernamePage.assertPageOpened(5);
-        loginUsernamePage.fillUsername(R.TESTDATA.get("user_3_username"));
-
-        LoginPasswordPage loginPasswordPage = loginUsernamePage.clickLoginUsernameButton();
-        loginPasswordPage.assertPageOpened(5);
-        loginPasswordPage.fillPassword(R.TESTDATA.get("user_3_password"));
-        loginPasswordPage.clickLoginButton();
-
-        Assert.assertTrue(homePage.checkUsernameLabel(R.TESTDATA.get("user_3_name")));
+    public void testLogInUserSuccessfully() {
+        HomePageService hps = new HomePageService();
+        HomePage homePage = hps.loginService(R.TESTDATA.get("user_3_username"), R.TESTDATA.get("user_3_password"));
         Assert.assertTrue(homePage.isPageOpened(), "Home page isn't opened");
     }
 
