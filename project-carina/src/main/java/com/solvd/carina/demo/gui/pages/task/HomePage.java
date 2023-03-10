@@ -2,7 +2,6 @@ package com.solvd.carina.demo.gui.pages.task;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.solvd.carina.demo.gui.components.task.FooterMenu;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -16,9 +15,6 @@ public class HomePage extends AbstractPage {
 
     @FindBy(id = "root_3")
     private ExtendedWebElement sportsLabel;
-
-    @FindBy(id = "module-footer")
-    private FooterMenu footerMenu;
 
     @FindBy(id = "footer-wrapper")
     private ExtendedWebElement footer;
@@ -38,8 +34,8 @@ public class HomePage extends AbstractPage {
         setUiLoadedMarker(loginButton);
     }
 
-    public FooterMenu getFooterMenu() {
-        return footerMenu;
+    public ExtendedWebElement getFooterMenu() {
+        return footer;
     }
 
     public LoginUsernamePage clickLoginButton() {
@@ -75,8 +71,5 @@ public class HomePage extends AbstractPage {
         return new NewsPage(getDriver());
     }
 
-    public void scrollToFooter() {
-        footer.scrollTo();
-    }
 
 }

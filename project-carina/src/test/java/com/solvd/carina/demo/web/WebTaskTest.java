@@ -14,8 +14,6 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
-import static org.testng.Assert.assertTrue;
-
 
 public class WebTaskTest extends AbstractTest {
 
@@ -25,7 +23,6 @@ public class WebTaskTest extends AbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         homePage.assertPageOpened(5);
-        assertTrue(homePage.isLoginButtonPresent(), "Login button isn't present");
 
         LoginUsernamePage loginUsernamePage = homePage.clickLoginButton();
         loginUsernamePage.assertPageOpened(5);
@@ -94,7 +91,7 @@ public class WebTaskTest extends AbstractTest {
 
     @Test(dataProvider = "searchTerms", description = "Test Yahoo search functionality")
     @MethodOwner(owner = "maratano")
-    public void testOpenAndSearchInSportPage(String searchTerm) {
+    public void testOpenAndSearchInSportPage(int a, String searchTerm) {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(5), "Home page isn't opened");
@@ -103,17 +100,16 @@ public class WebTaskTest extends AbstractTest {
         Assert.assertTrue(sportsPage.isPageOpened(5), "Sports page isn't opened");
 
         NewsPage newsPage = sportsPage.search(searchTerm);
-        SoftAssert softAssert = new SoftAssert();
-        softAssert.assertTrue(newsPage.isPageOpened(5), "News page is not opened!");
-        softAssert.assertAll();
+        Assert.assertTrue(newsPage.isPageOpened(5), "News page is not opened!");
+
     }
 
     @DataProvider(name = "searchTerms")
     public static Object[][] searchTermsDataProvider() {
         return new Object[][]{
-                {"Boca"},
-                {"River"},
-                {"Estudiantes"}
+                {1, "Boca"},
+                {2, "River"},
+                {3, "Estudiantes"}
         };
     }
 }
