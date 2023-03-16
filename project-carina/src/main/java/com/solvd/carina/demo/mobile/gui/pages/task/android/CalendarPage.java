@@ -15,6 +15,14 @@ public class CalendarPage extends CalendarPageBase {
     @FindBy(id = "tasks_speed_dial_container")
     private ExtendedWebElement taskButton;
 
+    @FindBy(id = "og_apd_ring_view")
+    private ExtendedWebElement userButton;
+
+
+    @FindBy(id = "og_primary_account_information")
+    private ExtendedWebElement userNameLabel;
+
+
     public CalendarPage(WebDriver driver) {
         super(driver);
     }
@@ -35,5 +43,18 @@ public class CalendarPage extends CalendarPageBase {
         return initPage(getDriver(), TaskPageBase.class);
     }
 
+    @Override
+    public void clickUserButton() {
+        userButton.click();
+    }
 
+    @Override
+    public boolean isUserLabelPresent() {
+        return userNameLabel.isElementPresent(5);
+    }
+
+    @Override
+    public ExtendedWebElement getUserNameLabel() {
+        return userNameLabel;
+    }
 }
