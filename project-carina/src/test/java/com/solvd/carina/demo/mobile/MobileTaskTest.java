@@ -1,10 +1,12 @@
 package com.solvd.carina.demo.mobile;
 
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
-import com.solvd.carina.demo.mobile.gui.pages.task.android.CalendarPage;
-import com.solvd.carina.demo.mobile.gui.pages.task.android.InfoPage;
-import com.solvd.carina.demo.mobile.gui.pages.task.android.TaskPage;
+import com.solvd.carina.demo.mobile.gui.pages.task.common.CalendarPageBase;
 import com.solvd.carina.demo.mobile.gui.pages.task.common.HomePageBase;
+import com.solvd.carina.demo.mobile.gui.pages.task.common.InfoPageBase;
+import com.solvd.carina.demo.mobile.gui.pages.task.common.TaskPageBase;
+import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
+import com.zebrunner.carina.utils.R;
 import com.zebrunner.carina.utils.mobile.IMobileUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,24 +14,23 @@ import org.testng.annotations.Test;
 public class MobileTaskTest implements IAbstractTest, IMobileUtils {
 
     @Test()
-    public void test() {
+    @MethodOwner(owner = "maratano")
+    public void testCreateNewTask() {
         HomePageBase hp = initPage(getDriver(), HomePageBase.class);
         Assert.assertTrue(hp.isPageOpened());
-        hp.clickNext();
 
-        InfoPage infoPage = new InfoPage(getDriver());
+        InfoPageBase infoPage = hp.clickNext();
         Assert.assertTrue(infoPage.isPageOpened());
-        infoPage.clickGotItButton();
 
-        CalendarPage calendarPage = new CalendarPage(getDriver());
+        CalendarPageBase calendarPage = infoPage.clickGotItButton();
         Assert.assertTrue(calendarPage.isPageOpened());
         calendarPage.clickPlusButton();
-        calendarPage.clickTaskButton();
 
-        TaskPage taskPage = new TaskPage(getDriver());
+        TaskPageBase taskPage = calendarPage.clickTaskButton();
         Assert.assertTrue(taskPage.isPageOpened());
-        taskPage.fillTitle("test");
+        taskPage.fillTitle(R.TESTDATA.get("mobile_test"));
         taskPage.clickSaveButton();
+        Assert.assertTrue(calendarPage.isPageOpened(), "Calendar page isn't opened");
     }
 
 }

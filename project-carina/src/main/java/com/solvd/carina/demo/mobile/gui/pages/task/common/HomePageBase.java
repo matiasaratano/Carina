@@ -9,7 +9,6 @@ public abstract class HomePageBase extends AbstractPage {
         super(webDriver);
     }
 
-    public abstract void clickNext();
-
+    public abstract InfoPageBase clickNext();
 
 }
