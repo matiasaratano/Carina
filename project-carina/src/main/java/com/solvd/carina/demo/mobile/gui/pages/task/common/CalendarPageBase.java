@@ -1,6 +1,5 @@
 package com.solvd.carina.demo.mobile.gui.pages.task.common;
 
-import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
 import org.openqa.selenium.WebDriver;
 
@@ -17,6 +16,6 @@ public abstract class CalendarPageBase extends AbstractPage {
 
     public abstract boolean isUserLabelPresent();
 
-    public abstract ExtendedWebElement getUserNameLabel();
+    public abstract String getUsername();
 
 }

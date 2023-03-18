@@ -54,7 +54,7 @@ public class CalendarPage extends CalendarPageBase {
     }
 
     @Override
-    public ExtendedWebElement getUserNameLabel() {
-        return userNameLabel;
+    public String getUsername() {
+        return userNameLabel.getText();
     }
 }

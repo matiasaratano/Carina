@@ -46,7 +46,7 @@ public class MobileTaskTest implements IAbstractTest, IMobileUtils {
         Assert.assertTrue(calendarPage.isPageOpened());
         calendarPage.clickUserButton();
         Assert.assertTrue(calendarPage.isUserLabelPresent(), "Label isn't present");
-        Assert.assertEquals(R.TESTDATA.get("mobile_user_name"), calendarPage.getUserNameLabel().getText(), "User name doesn't match expected value");
+        Assert.assertEquals(R.TESTDATA.get("mobile_user_name"), calendarPage.getUsername(), "User name doesn't match expected value");
     }
 
 }
